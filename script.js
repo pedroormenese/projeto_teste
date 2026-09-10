@@ -1,10 +1,9 @@
-const item = document.querySelectorAll(".item-container");
+const item = document.querySelectorAll(".item");
 let startX;
 let positionX;
 
 item.forEach((item) => {
     item.style.color = "blue";
-    item.style.backgroundColor = "blue";
 
     item.addEventListener('touchstart', /** @param {TouchEvent} e */(e) => {
     startX = e.touches[0].clientX;
