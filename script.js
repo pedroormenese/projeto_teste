@@ -3,8 +3,8 @@ let startX;
 let positionX;
 
 item.forEach((item) => {
-    item.style.color = "#ff0000";
-    item.style.backgroundColor = "#ff0000";
+    item.style.color = "blue";
+    item.style.backgroundColor = "blue";
 })
 
 item.addEventListener('touchstart', /** @param {TouchEvent} e */(e) => {
