@@ -1,0 +1,32 @@
+.item-container {
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+}
+
+.acoes {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.acoes button {
+    height: 100%;
+}
+
+.item {
+    position: relative;
+    z-index: 1;
+
+    height: 100%;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    transition: transform 0.2s;
+}
