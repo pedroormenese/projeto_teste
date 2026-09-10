@@ -13,7 +13,7 @@ item.addEventListener("touchmove", /** @param {TouchEvent} e */(e) => {
 })
 
 item.addEventListener("touchend", /** @param {TouchEvent} e */ (e) => {
-    if (positionX < -80) {
+    if (positionX < -10) {
         item.style.transform = "translateX(-100px)";
     }
 
