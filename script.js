@@ -5,19 +5,18 @@ let positionX;
 item.forEach((item) => {
     item.style.color = "blue";
     item.style.backgroundColor = "blue";
-})
 
-item.addEventListener('touchstart', /** @param {TouchEvent} e */(e) => {
+    item.addEventListener('touchstart', /** @param {TouchEvent} e */(e) => {
     startX = e.touches[0].clientX;
-})
+    })
 
 item.addEventListener("touchmove", /** @param {TouchEvent} e */(e) => {
     const currentX = e.touches[0].clientX;
     positionX = currentX - startX;
-})
+    })
 
 item.addEventListener("touchend", /** @param {TouchEvent} e */ (e) => {
-    if (positionX > -1) {
+    if (positionX < -1) {
         item.style.transform = "translateX(-100px)";
     }
 
@@ -27,4 +26,6 @@ item.addEventListener("touchend", /** @param {TouchEvent} e */ (e) => {
     }
 
     positionX = 0;
+    })
 })
+
