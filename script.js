@@ -2,6 +2,7 @@ const item = document.querySelector(".item-container");
 let startX;
 let positionX;
 
+item.style.backgroundColor = "red";
 
 item.addEventListener('touchstart', /** @param {TouchEvent} e */(e) => {
     startX = e.touches[0].clientX;
