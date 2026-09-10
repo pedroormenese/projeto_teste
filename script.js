@@ -1,27 +1,26 @@
-let inicioX = 0;
-let deslocamento = 0;
-
 const item = document.querySelector(".item");
+let startX;
+let positionX;
 
-item.addEventListener("touchstart", (e) => {
-    inicioX = e.touches[0].clientX;
-});
 
-item.addEventListener("touchmove", (e) => {
-    let atualX = e.touches[0].clientX;
-    deslocamento = atualX - inicioX;
+item.addEventListener('touchstart', /** @param {TouchEvent} e */(e) => {
+    startX = e.touches[0].clientX;
+})
 
-    if (deslocamento < 0) {
-        item.style.transform = `translateX(${deslocamento}px)`;
-    }
-});
+item.addEventListener("touchmove", /** @param {TouchEvent} e */(e) => {
+    const currentX = e.touches[0].clientX;
+    positionX = currentX - startX;
+})
 
-item.addEventListener("touchend", () => {
-    if (deslocamento < -80) {
+item.addEventListener("touchend", /** @param {TouchEvent} e */ (e) => {
+    if (positionX < -80) {
         item.style.transform = "translateX(-100px)";
-    } else {
-        item.style.transform = "translateX(0)";
     }
 
-    deslocamento = 0;
-});
+    if (positionX > 80) {
+        item.style.transform = "translateX(0)";
+
+    }
+
+    positionX = 0;
+})
