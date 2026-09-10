@@ -1,6 +1,8 @@
 let inicioX = 0;
 let deslocamento = 0;
 
+const item = document.querySelector(".item");
+
 item.addEventListener("touchstart", (e) => {
     inicioX = e.touches[0].clientX;
 });
